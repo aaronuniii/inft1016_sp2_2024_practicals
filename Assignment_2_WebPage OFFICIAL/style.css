@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #4161d7;
+    color: #ffffff;
+}
+
+header {
+    background-color: #4161d7;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav form {
+    margin-right: 20px; /* Adjust this value to move the form to the right */
+    text-align: right; /* Align form elements to the right */
+}
+
+nav form label {
+    margin-right: 10px; /* Add space between label and input */
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+footer {
+    background-color: #4161d7;
+    color: #ed1313;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #585757;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul li strong {
+    color: #222;
+}
+
+nav form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+nav form button {
+    padding: 5px 10px;
+    background-color: #4161d7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
