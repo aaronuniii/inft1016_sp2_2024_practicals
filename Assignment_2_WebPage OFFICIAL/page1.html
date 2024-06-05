@@ -3,19 +3,18 @@
 <head>    
 <meta charset="utf-8">    
 <title>	My page title</title>    
-<link rel="stylesheet" href="style.css">    
+<link rel="stylesheet" href="style.css">  
 <script>
 </script>  
 </head>  
-
-<body>    
+<body>   
 <header> 
 <h1>First Year At University - Experience (Aaron Pasion) </h1>    
 <button onclick="">Toggle Theme</button></header>   
 <nav> 
 <ul>  
  <li><a href="#">Home</a></li>        
- <li><a href="page2.html">Courses</a></li>        
+ <li><a href="page2.html">Courses</a></li>          
  <li><a href="#">To Do Tasks</a></li>           
 </ul>       
 <form><input type="text" name="user_name" placeholder="Enter your name!"> <button type="submit">Apply!</button>      </form>     </nav>    
@@ -32,7 +31,19 @@
 <h3>What did I learn?</h3>
 
 <p>In Uni, I learned how to code, use Python, use HTML, and to overall be organized with tasks and assignments.</p>
-<footer>   <p>©Copyright 20XX by <Inset your name> All rights reversed.</p>    </footer>  
+<footer>   <p>©Copyright 2024 by <Insert your name> All rights reversed.</p>    </footer>  
+    
+    <div style="margin-top: 20px;">
+        <button onclick="document.getElementById('image1').style.display = 'block'; document.getElementById('image2').style.display = 'none';">Image 1</button>
+        <button onclick="document.getElementById('image1').style.display = 'none'; document.getElementById('image2').style.display = 'block';">Image 2</button>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <img id="image1" src="babylon.jpg" alt="Image 1" style="width: 250px; height: auto;">
+        <img id="image2" src="kanye.png" alt="Image 2" style="width: 250px; height: auto; display: none;">
+        <p style="margin-left: 20px;">This is a painting called the "Fall of Babylon" painted by John Martin in 1819. To view more, visit <a href="https://commons.wikimedia.org/wiki/File:The_fall_of_Babylon;_Cyrus_the_Great_defeating_the_Chaldean_Wellcome_V0034440.jpg">this link</a>.</p>
+        
+    </div>
+
 
 </body>
 </html>
