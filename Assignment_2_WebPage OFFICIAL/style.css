@@ -30,12 +30,12 @@ nav ul li a {
 }
 
 nav form {
-    margin-right: 20px; /* Adjust this value to move the form to the right */
-    text-align: right; /* Align form elements to the right */
+    margin-right: 20px; 
+    text-align: right; 
 }
 
 nav form label {
-    margin-right: 10px; /* Add space between label and input */
+    margin-right: 10px; 
 }
 
 main {
