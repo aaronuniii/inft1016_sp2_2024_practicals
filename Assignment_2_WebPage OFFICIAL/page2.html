@@ -15,9 +15,29 @@
             }
 
             toggleButton.addEventListener('click', switchTheme, false);
+            
+            function loadTitle() {
+            const queryString = window.location.search;
+            const name = new URLSearchParams(queryString).get("name");
+            if (name) {
+                document.getElementById = "<h1>Hello " + name + "</h1>";
+                document.title = "Hello " + name;
+            }
+        }
+        document.body.onload = loadTitle;
+
+        function Submit() {
+            let name = document.getElementById("headerchange").value;
+            window.location.search = "?name=" + name;
+        }
+            
+            loadTitle();   
         });
     </script>
+    
 </head>
+<body onload="loadTitle()">
+</body>
 <body data-theme="light">
     <header>
         <h1>First Year At University - Courses (Aaron Pasion)</h1>
@@ -26,11 +46,11 @@
     <nav>
         <ul>
             <li><a href="page1.html">Home</a></li>
-            <li><a href="#">Courses</a></li>
+            <li><a href="#">Courses</a></li>    
             <li><a href="#">To Do Tasks</a></li>
         </ul>
         <form>
-            <input type="text" name="user_name" placeholder="Enter your name!">
+            <input type="text" id="headerchange" name="user_name" placeholder="Enter your name!">
             <button type="submit">Apply!</button>
         </form>
     </nav>
