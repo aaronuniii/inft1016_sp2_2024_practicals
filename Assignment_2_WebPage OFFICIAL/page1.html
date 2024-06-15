@@ -55,7 +55,15 @@
         <p id text="text1" p style="margin-left: 20px;">The 1st image is a painting called the "Fall of Babylon" painted by John Martin in 1819. To view more, visit <a href="https://commons.wikimedia.org/wiki/File:The_fall_of_Babylon;_Cyrus_the_Great_defeating_the_Chaldean_Wellcome_V0034440.jpg">this link</a><br>The 2st image is a Kanye West Music Video called "Heaven and Hell" directed by Arnaud Bresson in 2021. To view more, visit <a href="https://www.imdb.com/title/tt17005836/">this link</a>.</p>
         
     </div>
-
+    <p class="time"></p>Current Date and Time is <span id='date-time'></span>.</p>
+    <script>
+    var dt = new Date();
+    var dateTimeSpan = document.getElementById('date-time');
+    var formattedDateTime = dt.toLocaleString();
+    document.getElementById('date-time').innerHTML=dt;
+    dateTimeSpan.innerHTML = formattedDateTime;
+    </script>
+    </body>
     <footer>   <p>©Copyright 2024 by <Insert your name> All rights reversed.</p>    </footer>  
 
 </body>
