@@ -5,12 +5,24 @@
 <title>	My page title</title>    
 <link rel="stylesheet" href="style.css">  
 <script>
-</script>  
-</head>  
-<body>   
-<header> 
-<h1>First Year At University - Experience (Aaron Pasion) </h1>    
-<button onclick="">Toggle Theme</button></header>   
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const toggleButton = document.querySelector('#theme-toggle');
+
+        function switchTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+
+        toggleButton.addEventListener('click', switchTheme, false);
+    });
+</script>
+</head>
+<body data-theme="light"> 
+    <header> 
+        <h1>First Year At University - Experience (Aaron Pasion) </h1>    
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>   
 <nav> 
 <ul>  
  <li><a href="#">Home</a></li>        
@@ -31,7 +43,7 @@
 <h3>What did I learn?</h3>
 
 <p>In Uni, I learned how to code, use Python, use HTML, and to overall be organized with tasks and assignments.</p>
-<footer>   <p>©Copyright 2024 by <Insert your name> All rights reversed.</p>    </footer>  
+
     
     <div style="margin-top: 20px;">
         <button onclick="document.getElementById('image1').style.display = 'block'; document.getElementById('image2').style.display = 'none';">Image 1</button>
@@ -44,6 +56,7 @@
         
     </div>
 
+    <footer>   <p>©Copyright 2024 by <Insert your name> All rights reversed.</p>    </footer>  
 
 </body>
 </html>

@@ -1,14 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(200, 200, 200);
+    --bg-color: #ffffff;
+    --font-color: #000000;
+    --heading-color: #000000;
     margin: 0;
     padding: 0;
-    background-color: #4161d7;
-    color: #ffffff;
+}   
+
+[data-theme="dark"] {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(50, 50, 50);
+    --bg-color: rgb(0, 0, 0);
+    --font-color: #ffffff;
+    --heading-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+h1 {
+    color: var(--heading-color);
 }
 
 header {
-    background-color: #4161d7;
-    color: white;
     padding: 10px 0;
     text-align: center;
 }
@@ -24,36 +41,20 @@ nav ul li {
     margin: 0 10px;
 }
 
-nav ul li a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
 
 nav form {
     margin-right: 20px; 
     text-align: right; 
 }
 
-nav form label {
-    margin-right: 10px; 
-}
-
 main {
     padding: 20px;
 }
 
-h1 {
-    color: #ffffff;
-}
-
 footer {
-    background-color: #4161d7;
-    color: #ed1313;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    color: var(--font-color);
+    text-align: bottom;
+    padding-bottom: 0%;
 }
 
 ul {
@@ -62,25 +63,10 @@ ul {
 }
 
 ul li {
-    background-color: #585757;
+    background-color: var(--secondary-color);
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
 }
 
-ul li strong {
-    color: #222;
-}
 
-nav form input[type="text"] {
-    padding: 5px;
-    border: 1px solid #000;
-}
-
-nav form button {
-    padding: 5px 10px;
-    background-color: #4161d7;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}

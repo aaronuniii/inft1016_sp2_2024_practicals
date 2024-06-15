@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html>  
-<head>    
-<meta charset="utf-8">    
-<title>	My page title</title>    
-<link rel="stylesheet" href="style.css">    
-<script>
-</script>  
-</head>  
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My page title</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const toggleButton = document.querySelector('#theme-toggle');
 
-<body>    
-<header> 
-<h1>First Year At University - Courses (Aaron Pasion) </h1>    
-<button onclick="">Toggle Theme</button></header>    
-<nav> 
-<ul>  
- <li><a href="page1.html">Home</a></li>        
- <li><a href="#">Courses</a></li>        
- <li><a href="#">To Do Tasks</a></li>           
-</ul>       
-<form><input type="text" name="user_name" placeholder="Enter your name!"> <button type="submit">Apply!</button>      </form>     </nav>    
+            function switchTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', newTheme);
+            }
 
-<main> 
-<article> <h2>First Year Courses</h2>        
-<ul>
-    <li>Problem Solving And Programming</li>
-    <li>Network Fundamentals</li>
-    <li>Information Technology Fundamentals</li>
-    <li>Design Thinking Studio</li>
-</ul>
-<footer>   <p>©Copyright 2024 by <Insert your name> All rights reversed.</p>    </footer>  
-
+            toggleButton.addEventListener('click', switchTheme, false);
+        });
+    </script>
+</head>
+<body data-theme="light">
+    <header>
+        <h1>First Year At University - Courses (Aaron Pasion)</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="page1.html">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">To Do Tasks</a></li>
+        </ul>
+        <form>
+            <input type="text" name="user_name" placeholder="Enter your name!">
+            <button type="submit">Apply!</button>
+        </form>
+    </nav>
+    <main>
+        <article>
+            <h2>First Year Courses</h2>
+            <ul>
+                <li><a href="https://study.unisa.edu.au/courses/105293">Problem Solving And Programming</a></li>
+                <li><a href="https://study.unisa.edu.au/courses/100258">Network Fundamentals</a></li>
+                <li><a href="https://study.unisa.edu.au/courses/100915">Information Technology Fundamentals</a></li>
+                <li><a href="https://study.unisa.edu.au/courses/168771">Design Thinking Studio</a></li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>©Copyright 2024 by Aaron Pasion. All rights reserved.</p>
+    </footer>
 </body>
 </html>
