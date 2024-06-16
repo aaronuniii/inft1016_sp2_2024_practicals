@@ -16,3 +16,6 @@ addToDoButton.addEventListener('click', function(){
     })
 })
 
+/*The following features above correlate towards the to do list*/
+/*The let variables allow the HTML to execute with the Js Functions*/
+/*MThe eventlistener allows arguments to be added and executs the value of the input box to be executed*/

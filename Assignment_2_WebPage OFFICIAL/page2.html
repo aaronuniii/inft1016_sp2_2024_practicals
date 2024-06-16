@@ -5,6 +5,8 @@
     <title>My page title</title>
     <link rel="stylesheet" href="style.css">
     <script>
+        /*This is the Javascript area, it correlates towards the functions of the dark, light mode theme, the user_name feature,
+        and the ability to keep the theme in tact when a user leaves*/
         document.addEventListener('DOMContentLoaded', (event) => {
             const toggleButton = document.querySelector('#theme-toggle');
 
@@ -15,9 +17,10 @@
                 document.documentElement.setAttribute('data-theme', newTheme);
                 saveUserPreference(newTheme);
             }
-
+            /*Provides toggle feature for themes*/
             toggleButton.addEventListener('click', switchTheme, false);
-
+            /*Supposedly updates the h1 to greet the user and to replace header with Hello, which doesn't work
+            and works on the url or querystring*/
             function loadTitle() {
                 const queryString = window.location.search;
                 const name = new URLSearchParams(queryString).get("name");
@@ -26,27 +29,27 @@
                     document.title = "Hello " + name;
                 }
             }
-
+            /*Chooses the preference of user for the theme, dark or light*/
             function getUserPreference() {
                 return localStorage.getItem('theme') || 'light';
             }
-
+            /*Applies theme so users can choose which one to stay*/
             function applyUserPreference() {
                 const userPreference = getUserPreference();
                 document.documentElement.setAttribute('data-theme', userPreference);
             }
-            
+            /*Saves theme so user can get the same theme back when refreshing*/
             function saveUserPreference(userPreference) {
                 localStorage.setItem('theme', userPreference);
             }
 
-
+             /*Updates URL to give out name of text input*/
             function Submit(event) {
                 event.preventDefault();
                 let name = document.getElementById("headerchange").value;
                 window.location.search = "?name=" + name;
             }
-
+            /*Main feature to call the functions*/
             applyUserPreference();
             loadTitle();
           
@@ -85,6 +88,8 @@
     </main>
     <p class="time"></p>Current Date and Time is <span id='date-time'></span>.</p>
     <script>
+        /*For the date and time, it updates everytime its refreshed, the page. var dt is a storing of a new date object,
+        date time span is the reference to the ID, and the formattedDateTime is the basis of the locale settings of user*/
     var dt = new Date();
     var dateTimeSpan = document.getElementById('date-time');
     var formattedDateTime = dt.toLocaleString();

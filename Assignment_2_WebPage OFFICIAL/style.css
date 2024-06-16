@@ -1,3 +1,4 @@
+/*the whole theme for the web pages */
 :root {
     --primary-color: rgb(139, 149, 178);
     --secondary-color: rgb(139, 149, 178);
@@ -7,7 +8,7 @@
     margin: 0;
     padding: 0;
 }   
-
+/*the dark mode theme */
 [data-theme="dark"] {
     --primary-color: rgb(0, 0, 0);
     --secondary-color: rgb(50, 50, 50);
@@ -15,60 +16,62 @@
     --font-color: #ffffff;
     --heading-color: #ffffff;
 }
-
+/*body color changes with the variable toggles */
 body {
     background-color: var(--bg-color);
     color: var(--font-color);
 }
 
+/*h1 changes with toggle */
 h1 {
     color: var(--heading-color);
 }
 
+/*Center and padding thickness*/
 header {
     padding: 10px 0;
     text-align: center;
 }
-
+/*For the button on the top right and the paddings of it*/
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+/*For the button on the top right and the paddings of it*/
 nav ul li {
     display: inline;
     margin: 0 10px;
 }
 
-
+/*Enter name area*/
 nav form {
     margin-right: 20px; 
     text-align: right; 
 }
-
+/*Main padding*/
 main {
     padding: 20px;
 }
-
+/*Footer color with toggle change*/
 footer {
     color: var(--font-color);
     text-align: bottom;
     padding-bottom: 0%;
 }
-
+/*ul padding and list style*/
 ul {
     list-style-type: none;
     padding: 0;
 }
-
+/*color changable through toggle*/
 ul li {
     background-color: var(--secondary-color);
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
 }
-
+/*These style points are for the page 3 to do list*/
 hmtl, body {
     font-family: Arial, Helvetica, sans-serif;
     
@@ -105,7 +108,7 @@ hmtl, body {
     cursor: pointer;
     font-size: 20px;
 }
-
+/*password box in page 3*/
 #password {
     width: 300px;
     margin-right: 100px;
