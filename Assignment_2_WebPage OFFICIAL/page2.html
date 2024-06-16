@@ -11,27 +11,45 @@
             function switchTheme() {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+                
                 document.documentElement.setAttribute('data-theme', newTheme);
+                saveUserPreference(newTheme);
             }
 
             toggleButton.addEventListener('click', switchTheme, false);
-            
-            function loadTitle() {
-            const queryString = window.location.search;
-            const name = new URLSearchParams(queryString).get("name");
-            if (name) {
-                document.getElementById = "<h1>Hello " + name + "</h1>";
-                document.title = "Hello " + name;
-            }
-        }
-        document.body.onload = loadTitle;
 
-        function Submit() {
-            let name = document.getElementById("headerchange").value;
-            window.location.search = "?name=" + name;
-        }
+            function loadTitle() {
+                const queryString = window.location.search;
+                const name = new URLSearchParams(queryString).get("name");
+                if (name) {
+                    document.querySelector('header h1').innerHTML = "<h1>Hello " + name + "</h1>";
+                    document.title = "Hello " + name;
+                }
+            }
+
+            function getUserPreference() {
+                return localStorage.getItem('theme') || 'light';
+            }
+
+            function applyUserPreference() {
+                const userPreference = getUserPreference();
+                document.documentElement.setAttribute('data-theme', userPreference);
+            }
             
-            loadTitle();   
+            function saveUserPreference(userPreference) {
+                localStorage.setItem('theme', userPreference);
+            }
+
+
+            function Submit(event) {
+                event.preventDefault();
+                let name = document.getElementById("headerchange").value;
+                window.location.search = "?name=" + name;
+            }
+
+            applyUserPreference();
+            loadTitle();
+          
         });
     </script>
     
