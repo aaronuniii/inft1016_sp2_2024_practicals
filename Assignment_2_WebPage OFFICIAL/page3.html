@@ -64,8 +64,8 @@
     <nav>
         <ul>
             <li><a href="page1.html">Home</a></li>
-            <li><a href="#">Courses</a></li>    
-            <li><a href="page3.html">To Do Tasks</a></li>
+            <li><a href="page2.html">Courses</a></li>    
+            <li><a href="#">To Do Tasks</a></li>
         </ul>
         <form>
             <input type="text" id="headerchange" name="user_name" placeholder="Enter your name!">
@@ -74,15 +74,22 @@
     </nav>
     <main>
         <article>
-            <h2>First Year Courses</h2>
-            <ul>
-                <li><a href="https://study.unisa.edu.au/courses/105293">Problem Solving And Programming</a></li>
-                <li><a href="https://study.unisa.edu.au/courses/100258">Network Fundamentals</a></li>
-                <li><a href="https://study.unisa.edu.au/courses/100915">Information Technology Fundamentals</a></li>
-                <li><a href="https://study.unisa.edu.au/courses/168771">Design Thinking Studio</a></li>
-            </ul>
+            <h2>To Do List</h2>
+            <div class="container">
+                <input id="inputField" type="text"><button id="addToDo">+</button>
+                <div class="to-dos" id="toDoContainer">
+                </div>
+            </div>
+            <script src="todolist.js"></script>
+            
         </article>
     </main>
+    <body>
+        <div class="inputBox">
+            <input type="password" placeholder="password"
+            id="password"
+        </div>
+    </body>
     <p class="time"></p>Current Date and Time is <span id='date-time'></span>.</p>
     <script>
     var dt = new Date();

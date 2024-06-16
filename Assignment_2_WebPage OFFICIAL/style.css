@@ -69,3 +69,44 @@ ul li {
     border-radius: 5px;
 }
 
+hmtl, body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.container {
+    width:360px;
+    
+}
+
+#inputField {
+    height: 46px;
+    width: 300px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 25px;
+    vertical-align: middle;
+
+}
+
+#addtoDo {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+.to-dos{
+    margin-top: 25px;
+}
+
+.paragraph-styling{
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#password {
+    width: 300px;
+    margin-right: 100px;
+}
